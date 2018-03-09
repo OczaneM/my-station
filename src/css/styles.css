@@ -10,6 +10,10 @@ body {
 .signin {
   display: block;
   position: absolute;
-  top: 50vh;
-  left: 50vw;
+  top: 45vh;
+  left: 45vw;
+}
+
+.data {
+  display: block;
 }
