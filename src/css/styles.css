@@ -1,0 +1,15 @@
+/** GLOBAL STYLES */
+
+body {
+  font-family: sans-serif;
+}
+
+
+/** END GLOBAL */
+
+.signin {
+  display: block;
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+}
