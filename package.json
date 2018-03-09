@@ -1,0 +1,17 @@
+{
+  "name": "my-station",
+  "version": "1.0.0",
+  "description": "A simple web page where you can view gmail contacts and emails",
+  "engines": {
+    "node": ">= 7.0.0"
+  },
+  "scripts": {
+    "start-dev": "nodemon app.js -e html,js,scss",
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "nodemon": "^1.17.1",
+    "express": "^4.16.2",
+    "path": "^0.12.7"
+  }
+}
