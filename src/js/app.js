@@ -50,31 +50,23 @@ function makeApiCall() {
   // Make an API call to the People API
   gapi.client.people.people.connections.list({
     'resourceName': 'people/me',
-    'personFields': 'emailAddresses'
+    'pageSize': 50,
+    'personFields': 'emailAddresses,names'
   }).then(function(response) {
+
     // attach contact elems to DOM
-    for (let i = 0; i < response.result.connections.length; i++){
-      app.appendChild(
-        li({className: 'row'}, null,
-          p({className: 'contact'}, response.result.connections[i].names[0].displayName) ,
-          p({className: 'dash'}, '-'),
-          p({className: 'email'}, response.result.connections[i].emailAddresses[0].value)
-        )
+    // make sure not to exceet contacts amount
+    for (let i = 0; i < response.result.connections.length && holder.children.length < response.result.connections.length; i++){
+      holder.appendChild(
+          li({className: 'row'}, null,
+            p({className: 'contact'}, response.result.connections[i].names[0].givenName),
+            p({className: 'dash'}, '-'),
+            p({className: 'email'}, response.result.connections[i].emailAddresses[0].value)
+          )
       )
     }
-    console.log('Hello, ' + response.result.connections[0].emailAddresses[0].value)
   }, function(reason) {
     console.log('Error: ' + reason.result.error.message)
   })
 
-  // attach contact elems to DOM
-  // const data = {
-  //   render: function () {
-  //     app.appendChild(
-  //       div({className: 'row'}, null,
-  //         p({className: 'contact'}, 'response.result.connections[i].emailAddresses[0].value')
-  //       )
-  //     )
-  //   }
-  // }
 }

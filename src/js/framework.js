@@ -6,14 +6,14 @@ const state = {
 }
 
 //*** SELECTORS */
-const VIEW_CONTAINER = 'data-holder'
-var view = 'home'
-const SIGNIN = 'g-signin2'
+const VIEW_CONTAINER = 'data'
+const DATA_HOLDER = "data-holder"
+const ROWS = 'li.row'
 
 //*** QUERIES */
 const app = document.getElementById(VIEW_CONTAINER)
-const component = document.getElementById(view)
-const signin = document.querySelector(SIGNIN)
+const holder = document.getElementById(DATA_HOLDER)
+const rows = document.querySelectorAll(ROWS)
 
 //*** DATA STORAGE FUNCS */
 const setView = (viewToSet) => {
@@ -61,4 +61,5 @@ const appendChildrenHelper = (parent, ...children) => {
 //*** ELEMENTS */
 const div = (...args) => createDomElem('div', ...args)
 const p = (...args) => createDomElem('p', ...args)
-const li = (...args) => createDomeElem('li', ...args)
+const li = (...args) => createDomElem('li', ...args)
+const ul = (...args) => createDomElem('ul', ...args)

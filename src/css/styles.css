@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700i');
+
 /** GLOBAL STYLES */
 
 body {
@@ -21,12 +23,14 @@ ul {
 
 .type-logo {
   color: rgb(47, 185, 219);
-  font-family: Helvetica;
+  font-family: 'Open Sans' ;
+  font-weight: 700;
+  font-style: italic;
   margin: 0;
 }
 
 .logo-container {
-  padding-top: 1em;
+  padding-top: .8em;
   padding-left: 1em;
   color: white;
 }
@@ -35,7 +39,7 @@ ul {
   display: block;
   position: absolute;
   top: 48vh;
-  left: 42.5vw;
+  left: 43vw;
   border: 1px solid hsl(181, 100%, 32%);
   width: 10em;
   height: 1em;
@@ -84,6 +88,7 @@ ul {
 .sub-logo-container {
   width: 50%;
   margin-left: 50%;
+  line-height: 29px;
 }
 
 .data {
