@@ -21,16 +21,19 @@
         <p class="sub-logo-container type-logo">My Station</p>
       </div>
       <div class="signin" onclick="handleSignInClick()">Load Gmail Contacts</div>
-      <!-- <button id="signout-button" onclick="handleSignOutClick()">Sign Out</button> -->
     </div>
     <div id="data">
+        <div class="signout" onclick="handleSignOutClick()">- Sign Out</div>
+      <ul id="data-holder">
 
+      </ul>
     </div>
     <footer>
       <!-- footer stuff -->
     </footer>
 
     <!-- JS Scripts -->
+    <script src="src/js/framework.js"></script>
     <script src="src/js/app.js"></script>
     <script async defer src="https://apis.google.com/js/api.js"
       onload="this.onload=function(){};handleClientLoad()"

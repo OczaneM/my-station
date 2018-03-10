@@ -6,12 +6,17 @@ body {
   margin: 0;
 }
 
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 /* END GLOBAL */
 
 #main-header {
   background-color: rgb(27, 27, 27);
   height: 3em;
-  box-shadow: 0 1px 15px black;
 }
 
 .type-logo {
@@ -36,13 +41,25 @@ body {
   height: 1em;
   text-align: center;
   padding: 5px;
-  background-color: hsl(183, 53%, 55%);
+  background-color: hsl(182, 55%, 39%);
   color: white;
   font-family: sans-serif;
   cursor: pointer;
 }
 
+.signout {
+  display: none;
+  position: absolute;
+  top: 1em;
+  left: 6.5em;
+  color: white;
+  font-family: sans-serif;
+  cursor: pointer;
+  z-index: 2;
+}
+
 #home {
+  display: block;
   height: 100vh;
   background-image: linear-gradient(
     to bottom left,
@@ -67,4 +84,33 @@ body {
 .sub-logo-container {
   width: 50%;
   margin-left: 50%;
+}
+
+.data {
+  display: none;
+  padding: 0;
+  margin: 0;
+}
+
+.row {
+  height: 50px;
+  border-bottom: 1px solid rgb(209, 209, 209);
+  width: 100vw;
+  padding: 0;
+}
+
+.contact, .email, .dash {
+  float: left;
+  margin: 1em;
+  height: 1em;
+  color: dimgray;
+}
+
+.dash {
+  font-size: 30px;
+  margin: 7px 15px 0 15px;
+  color: #979797;
+}
+.email {
+  color: rgb(211, 0, 0)
 }
