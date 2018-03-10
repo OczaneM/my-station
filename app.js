@@ -18,8 +18,8 @@ app.use('*', (req, res, next) => {
 })
 
 app.post('/idToken', (req, res, next) => {
-  let {idtoken} = req.body
-  res.send(idtoken)
+  //let {idtoken} = req.body
+  res.send(req.body)
 })
 
 const server = app.listen(PORT, () => console.log(`Listening to port ${PORT}`))

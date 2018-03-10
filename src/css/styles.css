@@ -1,19 +1,70 @@
 /** GLOBAL STYLES */
 
 body {
-  font-family: sans-serif;
+  font-family: Helvetica;
+  padding: 0;
+  margin: 0;
 }
 
+/* END GLOBAL */
 
-/** END GLOBAL */
+#main-header {
+  background-color: rgb(27, 27, 27);
+  height: 3em;
+  box-shadow: 0 1px 15px black;
+}
+
+.type-logo {
+  color: rgb(47, 185, 219);
+  font-family: Helvetica;
+  margin: 0;
+}
+
+.logo-container {
+  padding-top: 1em;
+  padding-left: 1em;
+  color: white;
+}
 
 .signin {
   display: block;
   position: absolute;
-  top: 45vh;
-  left: 45vw;
+  top: 48vh;
+  left: 42.5vw;
+  border: 1px solid hsl(181, 100%, 32%);
+  width: 10em;
+  height: 1em;
+  text-align: center;
+  padding: 5px;
+  background-color: hsl(183, 53%, 55%);
+  color: white;
+  font-family: sans-serif;
+  cursor: pointer;
 }
 
-.data {
-  display: none;
+#home {
+  height: 100vh;
+  background-image: linear-gradient(
+    to bottom left,
+    rgb(252, 252, 252) 55%, hsl(181, 50%, 83%), hsl(183, 53%, 55%)
+  );
+}
+
+.welcome-container {
+  display: block;
+  position: absolute;
+  top: 43vh;
+  left: 40vw;
+  width: 280px;
+  font-size: 25px;
+}
+
+.welcome-text {
+  margin: 0;
+  float: left;
+}
+
+.sub-logo-container {
+  width: 50%;
+  margin-left: 50%;
 }
